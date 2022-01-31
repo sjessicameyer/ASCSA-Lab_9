@@ -1,7 +1,7 @@
 public class Record implements Comparable<Record>{
   private char origLetter;
   private int origLetterFreq;
-  private char actLetter;
+  private char repLetter;
 
   //constructors
   public Record(){
@@ -34,19 +34,19 @@ public class Record implements Comparable<Record>{
     this.origLetterFreq=freq;
   }
 
-  public int getActLetter(){
-    return this.actLetter;
+  public char getRepLetter(){
+    return this.repLetter;
   }
 
-  public void setActLetter(char letter){
-    this.actLetter=letter;
+  public void setRepLetter(char letter){
+    this.repLetter=letter;
   }
 
   public String toString(){
-    if (actLetter=='\0'){
+    if (repLetter=='\0'){
       return "The original letter is "+origLetter+" has a frequency of "+origLetterFreq+" in Cipher.txt.";
     }
-    return "The original letter is "+origLetter+", has a frequency of "+origLetterFreq+" in Cipher.txt, and the actual letter is "+actLetter+".";
+    return "The original letter is "+origLetter+", has a frequency of "+origLetterFreq+" in Cipher.txt, and the replacement letter is "+repLetter+".";
   }
 
 
